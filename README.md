@@ -1,84 +1,99 @@
 # Library-Management-System-in-Java
 A Java-based text-driven Library Management System (LMS) designed to simulate the day-to-day operations of a library, built using core Object-Oriented Programming (OOP) principles. This was developed as a portfolio assignment for the "Introduction to Object-Oriented Programming" module (CFS2104) at the University of Huddersfield.
 
-🚀 Features
-👨‍💼 For Staff
-Add, edit, and delete books and magazines from the library catalog
+Features
+For Staff:
+Add, edit, and delete items (Books and Magazines) in the library catalog
 
-Register, edit, or delete members
+Register, update, or remove library members
 
-View all library items
+View the entire catalog and current loans
 
-View all current loans
+Login/logout functionality
 
-Staff authentication (login/logout)
-
-👤 For Members
-View available items
+For Members:
+View available library items
 
 Borrow and return items
 
-View current loans and overdue fees
+View current loans and overdue charges
 
-Member authentication (login/logout)
+Login/logout functionality
 
-🧱 Object-Oriented Design
-This project demonstrates the four pillars of OOP:
+Object-Oriented Design Principles
+The system implements the four main pillars of object-oriented programming:
 
-Encapsulation: Classes with private fields and public getters/setters (e.g., Book, Member, Loan)
+Encapsulation
+Data is kept secure using private access modifiers with appropriate getter and setter methods. Classes such as Book, Magazine, Member, and Loan demonstrate encapsulation.
 
-Inheritance: Common attributes in abstract base classes (LibraryItem, User) extended by subclasses
+Inheritance
+Shared attributes and methods are moved to parent classes. For example:
 
-Abstraction: Abstract classes and interfaces to hide implementation details
+LibraryItem is a parent class for Book and Magazine
 
-Polymorphism: Method overriding in classes like Book and Magazine (e.g., getItemType(), toString())
+User is a parent class for Member and Staff
 
-📊 Data Handling
-Operates entirely in memory (no file I/O)
+Abstraction
+Complex details are hidden using abstract classes and interfaces. For instance, LibraryItem is declared abstract and not used directly.
 
-Session data persists until the program is closed
+Polymorphism
+Method overriding is used to modify behaviors in subclasses. Examples include the getItemType() and toString() methods in Book and Magazine.
 
-🧪 Testing & Validation
-✅ Manual Test Cases
-Item and user registration/editing
+Data Handling
+The system runs fully in-memory for simplicity and better runtime performance.
 
-Borrowing and returning functionality
+No data is saved to or loaded from external files. All session data is lost once the program ends.
 
-Overdue fine calculation
+Input Validation and Error Handling
+A separate module handles input validation.
 
-⚠️ Edge Cases Tested
-Borrowing unavailable items
+Validations include:
 
-Duplicate user registration
-
-Invalid logins
-
-Returning items past due date
-
-🔐 Input Validation
 Non-empty strings
 
-Date format enforced (YYYY-MM-DD)
+Proper date format (yyyy-mm-dd)
 
-Non-negative membership IDs
+Non-negative numeric inputs
 
-Try-catch blocks with user-friendly messages
+Try-catch blocks are used to catch input errors, and clear error messages are shown to guide users.
 
-🧩 Technologies Used
-Language: Java
+Testing Strategy
+Functional Testing:
+All features were manually tested for correctness, including:
 
-Interface: Console/Text-based UI
+Adding, editing, and removing catalog items
 
-Development Paradigm: Object-Oriented Programming
+Member registration and login
 
-🎯 Learning Objectives
-Practice of real-world system modeling using Java
+Borrowing and returning items
 
-Implementation of OOP design patterns
+Calculation of overdue fees
 
-Handling user interaction, system validation, and logical separation of concerns
+Edge Cases:
+Attempting to borrow unavailable items
 
-📁 Project Structure (Sample)
+Registering duplicate users
+
+Invalid login credentials
+
+Returning items before and after due dates
+
+Editing or deleting non-existent users/items
+
+Challenges and Solutions
+File Handling: Initially used file I/O, which was later removed in favor of in-memory data handling to reduce complexity.
+
+Menu Design: Separated staff and member functionalities into distinct menus for better organization and usability.
+
+Technologies Used
+Programming Language: Java
+
+Interface Type: Console/Text-based UI
+
+Programming Paradigm: Object-Oriented Programming (OOP)
+
+Project Structure (Example)
+
 css
 Copy
 Edit
@@ -90,13 +105,10 @@ Edit
 │── LibraryItem.java
 │── User.java
 │── Loan.java
-│── LibrarySystem.java
 │── InputValidator.java
+│── LibrarySystem.java
 │── Main.java
-🧠 Challenges Faced
-Initially used file handling, later replaced with in-memory storage for better performance
 
-Refactored the system to separate staff and member functionality for clarity and maintainability
+Conclusion
+This project successfully simulates a basic library system while implementing key OOP principles. The design is modular and maintainable, with potential for future expansion such as persistent data storage or GUI integration.
 
-📌 Conclusion
-The Library Management System provides a clean, efficient simulation of a library's operations while reinforcing key OOP principles. Its modular and scalable design makes it suitable for future enhancements like GUI integration or persistent storage.
