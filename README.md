@@ -1,10 +1,6 @@
 # Library-Management-System-in-Java
 A Java-based text-driven Library Management System (LMS) designed to simulate the day-to-day operations of a library, built using core Object-Oriented Programming (OOP) principles. This was developed as a portfolio assignment for the "Introduction to Object-Oriented Programming" module (CFS2104) at the University of Huddersfield.
 
-# Library Management System in Java
-
-A Java-based text-driven Library Management System (LMS) designed to simulate the day-to-day operations of a library, built using core Object-Oriented Programming (OOP) principles. This was developed as a portfolio assignment for the "Introduction to Object-Oriented Programming" module (CFS2104) at the University of Huddersfield.
-
 ## Features
 
 ### For Staff
